@@ -1,0 +1,33 @@
+# .NET
+**/bin/
+**/obj/
+**/out/
+**/*.user
+**/*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+.idea/
+.vscode/
+TestResults/
+
+# Node / frontend
+node_modules/
+dist/
+.vite/
+*.local
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Frontend build artifacts
+frontend/coverage/
+frontend/vite.config.d.ts
+frontend/vite.config.js
+frontend/*.tsbuildinfo

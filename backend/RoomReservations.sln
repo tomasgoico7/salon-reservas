@@ -1,0 +1,67 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B0000001-0000-0000-0000-000000000000}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B0000002-0000-0000-0000-000000000000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomReservations.Domain", "src\RoomReservations.Domain\RoomReservations.Domain.csproj", "{A0000001-0000-0000-0000-000000000000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomReservations.Application", "src\RoomReservations.Application\RoomReservations.Application.csproj", "{A0000002-0000-0000-0000-000000000000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomReservations.Infrastructure", "src\RoomReservations.Infrastructure\RoomReservations.Infrastructure.csproj", "{A0000003-0000-0000-0000-000000000000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomReservations.Api", "src\RoomReservations.Api\RoomReservations.Api.csproj", "{A0000004-0000-0000-0000-000000000000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomReservations.Domain.Tests", "tests\RoomReservations.Domain.Tests\RoomReservations.Domain.Tests.csproj", "{A0000005-0000-0000-0000-000000000000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomReservations.Application.Tests", "tests\RoomReservations.Application.Tests\RoomReservations.Application.Tests.csproj", "{A0000006-0000-0000-0000-000000000000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomReservations.Api.Tests", "tests\RoomReservations.Api.Tests\RoomReservations.Api.Tests.csproj", "{A0000007-0000-0000-0000-000000000000}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0000001-0000-0000-0000-000000000000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0000001-0000-0000-0000-000000000000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0000001-0000-0000-0000-000000000000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0000001-0000-0000-0000-000000000000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0000002-0000-0000-0000-000000000000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0000002-0000-0000-0000-000000000000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0000002-0000-0000-0000-000000000000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0000002-0000-0000-0000-000000000000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0000003-0000-0000-0000-000000000000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0000003-0000-0000-0000-000000000000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0000003-0000-0000-0000-000000000000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0000003-0000-0000-0000-000000000000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0000004-0000-0000-0000-000000000000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0000004-0000-0000-0000-000000000000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0000004-0000-0000-0000-000000000000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0000004-0000-0000-0000-000000000000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0000005-0000-0000-0000-000000000000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0000005-0000-0000-0000-000000000000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0000005-0000-0000-0000-000000000000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0000005-0000-0000-0000-000000000000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0000006-0000-0000-0000-000000000000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0000006-0000-0000-0000-000000000000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0000006-0000-0000-0000-000000000000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0000006-0000-0000-0000-000000000000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0000007-0000-0000-0000-000000000000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0000007-0000-0000-0000-000000000000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0000007-0000-0000-0000-000000000000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0000007-0000-0000-0000-000000000000}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A0000001-0000-0000-0000-000000000000} = {B0000001-0000-0000-0000-000000000000}
+		{A0000002-0000-0000-0000-000000000000} = {B0000001-0000-0000-0000-000000000000}
+		{A0000003-0000-0000-0000-000000000000} = {B0000001-0000-0000-0000-000000000000}
+		{A0000004-0000-0000-0000-000000000000} = {B0000001-0000-0000-0000-000000000000}
+		{A0000005-0000-0000-0000-000000000000} = {B0000002-0000-0000-0000-000000000000}
+		{A0000006-0000-0000-0000-000000000000} = {B0000002-0000-0000-0000-000000000000}
+		{A0000007-0000-0000-0000-000000000000} = {B0000002-0000-0000-0000-000000000000}
+	EndGlobalSection
+EndGlobal
