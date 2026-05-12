@@ -43,6 +43,8 @@ docker compose down
 
 ## Tests
 
+### Backend
+
 ```bash
 cd backend
 dotnet test
@@ -52,6 +54,18 @@ dotnet test
 - `RoomReservations.Domain.Tests` — invariantes de entidades y lógica de conflictos
 - `RoomReservations.Application.Tests` — servicios con repositorios mockeados y validadores
 - `RoomReservations.Api.Tests` — middleware de excepciones + integración E2E con `WebApplicationFactory`
+
+### Frontend
+
+```bash
+cd frontend
+npm run test:coverage
+```
+
+21 tests con Vitest + React Testing Library, 100% de cobertura en los módulos testeados:
+- `isApiError.test.ts` — type guard de respuestas de error de la API
+- `reservationSchema.test.ts` — validaciones del esquema Zod del formulario
+- `ErrorBoundary.test.tsx` — comportamiento del componente de error boundary
 
 ## API
 
