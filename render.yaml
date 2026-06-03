@@ -1,0 +1,44 @@
+# Blueprint de Render — despliegue gratuito de Salon Reservas
+# Dos servicios: la API en Docker (free) y el frontend como static site (gratis).
+# El static site reescribe /api/* hacia la API, así el navegador ve todo en el
+# mismo origen y no hace falta CORS ni cambiar el código del frontend.
+#
+# Importante: los nombres de servicio definen el subdominio .onrender.com y son
+# globales. Si "salonreservas-api" ya está tomado, cambia AMBAS apariciones
+# (el name del servicio y la destination del rewrite de abajo).
+
+services:
+  # ---- Backend: ASP.NET Core 8 (Docker) ----
+  - type: web
+    name: salonreservas-api
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+
+  # ---- Frontend: React + Vite (static site, gratis) ----
+  - type: web
+    name: salonreservas-web
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    autoDeploy: true
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: /api
+    routes:
+      # Proxy de la API (debe ir antes del fallback SPA)
+      - type: rewrite
+        source: /api/*
+        destination: https://salonreservas-api.onrender.com/api/*
+      # Fallback de SPA: cualquier ruta no-archivo sirve index.html
+      - type: rewrite
+        source: /*
+        destination: /index.html
